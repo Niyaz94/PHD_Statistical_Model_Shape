@@ -1,0 +1,11 @@
+zarzycka@agh.edu.pl
+
+sbatch runUNet.sh
+
+squeue
+
+scancel ID
+
+sbatch --test-only runUNet.sh
+
+srun --gres=gpu:1 -p plgrid-gpu-a100 -t 1:00:00 -N 1 -n 12 -A plgplgonwelocont-gpu-a100  --pty /bin/bash -l
